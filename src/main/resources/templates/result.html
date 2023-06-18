@@ -38,10 +38,10 @@
 <body>
 <div class="container">
   <h1>게시글 결과</h1>
-  <p><strong>제목:</strong> <span th:text="${title}"></span></p>
-  <p><strong>내용:</strong> <span th:text="${content}"></span></p>
-  <p><strong>파일:</strong> <span th:text="${picFiles}"></span></p>
-  <p><strong>파일 설명:</strong> <span th:text="${picFileDescription}"></span></p>
+  <p><strong>제목:</strong> <span th:text="${board.title}"></span></p>
+  <p><strong>내용:</strong> <span th:text="${board.content}"></span></p>
+  <p><strong>파일:</strong> <span th:text="${singleFile}"></span></p>
+  <p><strong>파일 설명:</strong> <span th:text="${board.singleFileDescription}"></span></p>
   <div th:each="fileName : ${picFiles}">
     <img th:src="@{'/uploadFiles/' + ${fileName}}" alt="Uploaded file">
   </div>
